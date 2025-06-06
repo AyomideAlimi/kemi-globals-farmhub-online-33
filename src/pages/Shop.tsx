@@ -9,7 +9,7 @@ import { ShoppingCart, Plus, Minus } from "lucide-react";
 import { toast } from "sonner";
 
 const Shop = () => {
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState<{[key: number]: number}>({});
   const [cartTotal, setCartTotal] = useState(0);
 
   const products = [
@@ -75,7 +75,7 @@ const Shop = () => {
     }
   ];
 
-  const addToCart = (product) => {
+  const addToCart = (product: typeof products[0]) => {
     setCart(prev => ({
       ...prev,
       [product.id]: (prev[product.id] || 0) + 1
@@ -84,7 +84,7 @@ const Shop = () => {
     toast.success(`Added ${product.name} to cart`);
   };
 
-  const removeFromCart = (product) => {
+  const removeFromCart = (product: typeof products[0]) => {
     if (cart[product.id] > 0) {
       setCart(prev => ({
         ...prev,
@@ -95,9 +95,9 @@ const Shop = () => {
     }
   };
 
-  const getCartQuantity = (productId) => cart[productId] || 0;
+  const getCartQuantity = (productId: number) => cart[productId] || 0;
 
-  const formatPrice = (price) => {
+  const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-NG', {
       style: 'currency',
       currency: 'NGN'
@@ -213,6 +213,7 @@ const Shop = () => {
                 {Object.entries(cart).map(([productId, quantity]) => {
                   if (quantity === 0) return null;
                   const product = products.find(p => p.id === parseInt(productId));
+                  if (!product) return null;
                   return (
                     <div key={productId} className="flex justify-between items-center">
                       <div>
@@ -237,7 +238,7 @@ const Shop = () => {
                   href={`https://wa.me/2348123456789?text=Hello! I'd like to place an order for: ${Object.entries(cart).map(([productId, quantity]) => {
                     if (quantity === 0) return '';
                     const product = products.find(p => p.id === parseInt(productId));
-                    return `${product.name} x ${quantity}`;
+                    return product ? `${product.name} x ${quantity}` : '';
                   }).filter(Boolean).join(', ')}. Total: ${formatPrice(cartTotal)}`}
                   target="_blank"
                   rel="noopener noreferrer"
