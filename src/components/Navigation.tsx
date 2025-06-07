@@ -30,7 +30,7 @@ const Navigation = () => {
               <span className="text-white font-bold text-lg">KG</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-green-800">Kemi Globals</h1>
+              <h1 className="text-xl font-bold text-green-800">Kemta Globals</h1>
               <p className="text-xs text-green-600">Quality Livestock & Feed</p>
             </div>
           </Link>

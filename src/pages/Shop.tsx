@@ -235,7 +235,7 @@ const Shop = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href={`https://wa.me/2348123456789?text=Hello! I'd like to place an order for: ${Object.entries(cart).map(([productId, quantity]) => {
+                  href={`https://wa.me/2348051272003?text=Hello! I'd like to place an order for: ${Object.entries(cart).map(([productId, quantity]) => {
                     if (quantity === 0) return '';
                     const product = products.find(p => p.id === parseInt(productId));
                     return product ? `${product.name} x ${quantity}` : '';

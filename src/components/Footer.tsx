@@ -14,7 +14,7 @@ const Footer = () => {
                 <span className="text-white font-bold text-lg">KG</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Kemi Globals</h3>
+                <h3 className="text-xl font-bold">Kemta Globals</h3>
                 <p className="text-green-200 text-sm">Quality Livestock & Feed</p>
               </div>
             </div>
@@ -23,13 +23,13 @@ const Footer = () => {
               We provide premium products to help your farming business thrive.
             </p>
             <div className="flex space-x-4">
-              <a href="tel:+2348123456789" className="flex items-center text-green-200 hover:text-white">
+              <a href="tel:+2348051272003" className="flex items-center text-green-200 hover:text-white">
                 <Phone className="w-4 h-4 mr-2" />
-                +234 812 345 6789
+                +234 805 127 2003
               </a>
-              <a href="mailto:info@kemiglobals.com" className="flex items-center text-green-200 hover:text-white">
+              <a href="mailto:info@kemtaglobals.com" className="flex items-center text-green-200 hover:text-white">
                 <Mail className="w-4 h-4 mr-2" />
-                info@kemiglobals.com
+                info@kemtaglobals.com
               </a>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-green-700 mt-8 pt-8 text-center">
           <p className="text-green-200">
-            © 2024 Kemi Globals. All rights reserved. Built with care for Nigerian farmers.
+            © 2025 Kemta Globals. All rights reserved. Built with care for Nigerian farmers.
           </p>
         </div>
       </div>

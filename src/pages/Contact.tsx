@@ -17,19 +17,19 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        "+234 812 345 6789",
-        "+234 803 456 7890"
+        "+234 805 127 2003",
+        "+234 906 665 6248"
       ],
-      action: "tel:+2348123456789"
+      action: "tel:+2348051272003"
     },
     {
       icon: Mail,
       title: "Email Address",
       details: [
-        "info@kemiglobals.com",
-        "sales@kemiglobals.com"
+        "info@kemtaglobals.com",
+        "sales@kemtaglobals.com"
       ],
-      action: "mailto:info@kemiglobals.com"
+      action: "mailto:info@kemtaglobals.com"
     },
     {
       icon: MapPin,
@@ -193,7 +193,7 @@ const Contact = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Contact</h2>
                 <div className="space-y-4">
                   <a 
-                    href="https://wa.me/2348123456789"
+                    href="https://wa.me/2348051272003"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
@@ -208,7 +208,7 @@ const Contact = () => {
                   </a>
 
                   <a 
-                    href="tel:+2348123456789"
+                    href="tel:+2348051272003"
                     className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
                   >
                     <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
@@ -216,12 +216,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Call Us</h3>
-                      <p className="text-gray-600">+234 812 345 6789</p>
+                      <p className="text-gray-600">+234 805 127 2003</p>
                     </div>
                   </a>
 
                   <a 
-                    href="mailto:info@kemiglobals.com"
+                    href="mailto:info@kemtaglobals.com"
                     className="flex items-center p-4 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors"
                   >
                     <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mr-4">
@@ -229,7 +229,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Email Us</h3>
-                      <p className="text-gray-600">info@kemiglobals.com</p>
+                      <p className="text-gray-600">info@kemtaglobals.com</p>
                     </div>
                   </a>
                 </div>
