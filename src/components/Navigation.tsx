@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingCart } from "lucide-react";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-background shadow-lg sticky top-0 z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -41,11 +42,12 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-foreground hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
             ))}
+            <DarkModeToggle />
             <Button className="bg-green-600 hover:bg-green-700 flex items-center gap-2">
               <ShoppingCart className="w-4 h-4" />
               Cart
@@ -53,11 +55,12 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-2">
+            <DarkModeToggle />
             <Button
               variant="ghost"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700"
+              className="text-foreground"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -66,13 +69,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t">
+          <div className="lg:hidden bg-background border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block px-3 py-2 text-gray-700 hover:text-green-600 text-base font-medium"
+                  className="block px-3 py-2 text-foreground hover:text-green-600 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
